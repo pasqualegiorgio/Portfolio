@@ -1,236 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><Pasquale Giorgio/></title>
-        <link rel="icon" href="img/icon.svg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- Update these with your own fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+<html lang="it" dir="ltr">
+  <head>
+    <!-- Set di caratteri -->
+    <meta charset="utf-8">
+    <!-- Viweport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo della pagina -->
+    <title><Pasquale Giorgio/></title>
+    <!-- Icona del sito -->
+    <link rel="icon" href="img/icon.svg">
+    <!-- Link al file CSS normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Link al file CSS di Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <!-- Link al file CSS di Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Link al font di Google Ubuntu Mono -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <!-- Link al file CSS style.css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <!-- Logo della pagina -->
+      <div class="logo">
+        <img src="img/icon.svg" alt="Icona programmazione">
+      </div>
+      <!-- Bottone apertura menu' -->
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="btn-menu"></span>
+      </button>
+      <!-- Menu di navigazione -->
+      <nav class="nav">
+        <ul class="lista-di-navigazione">
+          <li><a href="#cosa-faccio" class="link-di-navigazione">Cosa faccio</a><hr></li>
+          <li><a href="#chi-sono" class="link-di-navigazione">Chi sono</a><hr></li>
+          <li><a href="#i-miei-progetti" class="link-di-navigazione">I miei progetti</a><hr></li>
+          <li><a href="#skills" class="link-di-navigazione">Conoscenze e competenze</a><hr></li>
+        </ul>
+      </nav>
+    </header>
 
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Contenuto principale del sito -->
+    <main>
+      <!-- Sezione Intro per la presentazione -->
+      <section class="intro" id="home">
+        <!-- Nome e cognome -->
+        <h1 class="titolo-sezione titolo-sezione--intro">
+          Ciao, sono <strong>Pasquale Giorgio</strong>
+        </h1>
+        <!-- Professione -->
+        <p class="sottotitolo-sezione sottotitolo-sezione--intro">junior front-end developer</p>
+        <!-- Immagine di profilo -->
+        <img src="img/Pasquale Giorgio.jpg" alt="Un immagine di profilo di Pasquale Giorgio" class="intro__img">
+      </section>
 
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="img/icon.svg" alt="">
+      <!-- Sezione Cosa faccio -->
+      <section id="cosa-faccio">
+        <h2 class="titolo-sezione titolo-sezione--cosafaccio">Cosa faccio</h2>
+        <div class="servizi">
+          <div class="card-deck">
+            <!-- Card numero 1 -->
+            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
+              <img src="img/start2impact.jpg" class="card-img-top" alt="..." style="border-bottom: 1px solid black; padding-top: 15px; padding-bottom: 15px;">
+              <div class="card-body">
+                <h4 class="card-title"><strong>Studente start2impact</strong></h4>
+                <p class="card-text">
+                  Il mio percorso di formazione principale è con <a href="https://www.start2impact.it/" class="card-link"><strong>start2impact</strong></a>, un'azienda che insegna ai giovani il mondo digitale.<br>
+                  Nello specifico, faccio parte del <strong>Master in Programmazione Web</strong>, che si basa sull'apprendimento di HTML, CSS, JavaScript, PHP, MySQL, Node.js, React e Wordpress e di tutti gli strumenti e i framework correlati.
+                </p>
+              </div>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+            <!-- Card numero 2 -->
+            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
+              <img src="img/front-end-dev.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title"><strong>Sviluppo Front End</strong></h4>
+                <p class="card-text">
+                  La mia attività principale di sviluppo riguarda la parte <strong>Front End</strong> dei progetti web, con particolare rilievo alla parte grafica, alle animazioni e alle interazioni con l'utente. Possiedo anche un'infarinatura generale dei linguaggi e delle tecnologie <strong>Back End</strong>, in modo tale da conciliare al meglio le due parti.
+                </p>
+              </div>
+            </div>
+            <!-- Card numero 3 -->
+            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
+              <img src="img/wordpress.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title"><strong>WordPress</strong></h4>
+                <p class="card-text">
+                  Grazie allo studio e alla pratica, sono in grado di creare un sito web da zero con <a href="https://it.wordpress.com/" class="card-link"><strong>WordPress</strong></a>, sia partendo da un tema già presente e personalizzando i contenuti del sito e sia creando un tema da zero o modificando un tema già presente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottone Torna sopra -->
+        <a href="#home" class="bottone">Torna sopra</a>
+      </section>
+
+      <!-- Sezione Chi sono -->
+        <section id="chi-sono">
+          <div class="chi-sono">
+            <h2 class="section__title section__title--chisono">Chi sono</h2>
+
+            <div>
+              <p>
+                <em>"Così come lo scrittore parte da un foglio bianco, così l'informatico parte da un monitor bianco. Il monitor è la tela, i tasti sono i pennelli, i linguaggi di programmazione sono i colori".</em><br>
+                <strong>Programmare</strong> è un'<em>arte</em> e l'informatico è l'artista moderno.<br>
+                Ogni informatico ha una grande responsabilità: portare l'innovazione tecnologica e digitale nel mondo.<br>
+                Ciao, sono <strong>Pasquale Giorgio</strong>, Junior Front End Web Developer e mi occupo di creare interfacce grafiche per i siti web che siano semplici, pulite, belle ma soprattutto funzionali allo scopo del sito.<br>
+                Ritengo che un buon sito web sia importante, in quanto è come la casa della parte online di ogni business.<br>
+                Infatti, un sito web che funziona è:
+                <ul>
+                  <li>Allineato agli obiettivi di business</li>
+                  <li>Integrato nella strategia di marketing online e complessiva</li>
+                  <li>Integrato nel customer journey: il sito è un punto di contatto fondamentale, in diversi momenti del customer journey.</li>
                 </ul>
-            </nav>
-        </header>
-
-        <!-- Introduction -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Ciao, sono <strong>Pasquale Giorgio</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">front-end developer</p>
-            <img src="img/Pasquale Giorgio.jpg" alt="a picture of Jane Smith smiling" class="intro__img">
-        </section>
-
-
-        <!-- My services -->
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">Cosa faccio</h2>
-            <div class="services">
-                <div class="service">
-                  <div class="card border-dark mb-3" style="width: 18rem;">
-                    <img src="img/start2impact.jpg" class="card-img-top" alt="..." style="padding-top: 15px; padding-bottom: 15px;">
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Studente start2impact</strong></h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                  </div>
-                </div> <!-- / service -->
-
-                <div class="service">
-                  <div class="card border-dark mb-3" style="width: 18rem;">
-                    <img src="img/front-end-dev.jpg" class="card-img-top" alt="...">
-                    <!-- Photo by Shahadat Rahman on Unsplash -->
-                    <br>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Sviluppo Front End</strong></h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                  </div>
-                </div> <!-- / service -->
-
-                <div class="service">
-                  <div class="card border-dark mb-3" style="width: 18rem;">
-                    <img src="img/wordpress.jpg" class="card-img-top" alt="...">
-                    <!-- Photo by Webaroo on Unsplash -->
-                    <br>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Wordpress</strong></h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                  </div>
-                </div> <!-- / service -->
-            </div> <!-- / services -->
-
-            <a href="#work" class="btn">I miei progetti</a>
-        </section>
-
-
-        <!-- About me -->
-        <section class="about-me" id="about">
-           <h2 class="section__title section__title--about">Chi sono</h2>
-           <!--
-           <p class="section__subtitle section__subtitle--about">Designer & developer based out of NYC</p>
-         -->
-           <div class="about-me__body">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-           </div>
-
-           <img src="img/me_standing_up.jpg" alt="Jane leaning against a bus" class="about-me__img">
-        </section>
-
-        <!-- My Work -->
-        <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">I miei progetti</h2>
-            <!--
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
-          -->
-            <div class="portfolio">
-              <div class="row row-cols-1 row-cols-md-3">
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a short card.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                </div>
+                E' per questo che sono appassionato anche di Digital Marketing e di Imprenditoria: per rendere i siti che creo non solo belli, ma anche efficaci.<br>
+                L'informatica è ciò che mi permette di mettere in atto la mia creatività.<br>
+                Amo imparare, fare nuove esperienze e conoscere nuove persone: sono fattori che mi permettono di aprire la mente e vivere una vita di successo.<br>
+                La crescita e il miglioramento personale sono la mia priorità.
+              </p>
             </div>
+
+            <img src="img/pasquale-giorgio-img-2.jpg" alt="Pasquale Giorgio" class="chi-sono__img">
+          </div>
+
+          <!-- Bottone Torna sopra -->
+         <a href="#home" class="bottone">Torna sopra</a>
         </section>
 
-        <!-- Conoscenze e competenze -->
-        <section class="about-me" id="about">
-           <h2 class="section__title section__title--about">Conoscenze e competenze</h2>
+      <!-- Sezione I miei progetti -->
+      <section id="i-miei-progetti">
+        <!-- Titolo -->
+        <h2 class="titolo-sezione">I miei progetti</h2>
 
-        </section>
-
-        <!-- I miei articoli -->
-        <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">I miei articoli</h2>
-            <!--
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
-          -->
-            <div class="portfolio">
-              <div class="row row-cols-1 row-cols-md-3">
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a short card.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                </div>
+        <!-- Contenitore presentazione -->
+        <div class="contenitore-presentazione">
+          <!-- Presentazione immagini -->
+          <div class="slides">
+            <a href="https://pasqualegiorgio.github.io/what-s-the-weather-like/" target="_blank"><img src="img/progetto1.jpg" alt="Progetto What's the weather like?"></a>
+            <div class="didascalia">
+              Sito che permette di ottenere le previsioni del meteo tramite l'inserimento da un input testuale di una determinata città.<br>
+              Clicca sull'immagine per dare uno sguardo al sito!<br>
+              <a href="https://github.com/pasqualegiorgio/what-s-the-weather-like" target="_blank">Clicca qui</a> per vedere la repository su GitHub.
             </div>
-        </section>
+          </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <!-- replace with your own email address -->
-            <a href="mailto:pasqualegiorgio9868@gmail.com" class="footer__link">pasqualegiorgio9868@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://codepen.io">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="http://dribbble.com">
-                        <i class="fab fa-dribbble"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+          <div class="slides">
+            <a href="https://pasqualegiorgio.github.io/fight-club-chat-room/" target="_blank"><img src="img/progetto2.jpg" alt="Progetto Fight Club Chat Room"></a>
+            <div class="didascalia">
+              Chat Room in grado di far connettere e interagire qualsiasi persona si colleghi ad essa.<br>
+              Clicca sull'immagine per dare uno sguardo al sito!<br>
+              <a href="https://github.com/pasqualegiorgio/fight-club-chat-room" target="_blank">Clicca qui</a> per vedere la repository su GitHub.
+            </div>
+          </div>
 
+          <div class="slides">
+            <img src="img/tema-wordpress.png" alt="Tema Wordpress per studi di consuleza"></a>
+            <div class="didascalia">
+              Tema WordPress per studio di consulenza generico, applicabile al proprio sito su WordPress.<br>
+              <a href="https://github.com/pasqualegiorgio/Progetto-Super-Guida-Wordpress" target="_blank">Clicca qui</a> per vedere il file per l'importazione del tema nella repository su GitHub.
+            </div>
+          </div>
 
-        <script src="js/index.js"></script>
+          <!-- Bottoni precedente e successivo -->
+          <a class="precedente" onclick="cambioImmagine(-1)">&#10094;</a>
+          <a class="successivo" onclick="cambioImmagine(1)">&#10095;</a>
+        </div>
+        <br>
 
-    </body>
+        <a href="#home" class="bottone">Torna sopra</a>
+      </section>
+
+      <!-- Conoscenze e competenze -->
+      <section id="skills">
+        <!-- Titolo -->
+        <h2 class="titolo-sezione titolo-sezione--work">Conoscenze e competenze</h2>
+        <br><br>
+
+        <h3><strong>Linguaggi</strong></h3>
+        <div class="contenitore-grid">
+          <div class="elemento-grid"><img src="img/html.svg" alt=""></div>
+          <div class="elemento-grid"><img src="img/css.svg" alt=""></div>
+          <div class="elemento-grid"><img src="img/javascript.svg" alt=""></div>
+          <div class="elemento-grid"><img src="img/php.svg" alt=""></div>
+        </div>
+
+        <br>
+
+        <h3><strong>Framework</strong></h3>
+        <div class="contenitore-grid">
+          <div class="elemento-grid">
+            <a href="https://getbootstrap.com/" target="_blank">
+              <img src="img/bootstrap.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <br>
+
+        <h3><strong>Librerie</strong></h3>
+        <div class="contenitore-grid">
+          <div class="elemento-grid">
+            <a href="https://nodejs.org/it/" target="_blank">
+              <img src="img/nodejs.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <br>
+
+        <h3><strong>Ambienti di sviluppo</strong></h3>
+        <div class="contenitore-grid">
+          <div class="elemento-grid">
+            <a href="https://atom.io/" target="_blank">
+              <img src="img/atom.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <h3><strong>CMS</strong></h3>
+        <div class="contenitore-grid">
+          <div class="elemento-grid">
+            <a href="https://it.wordpress.com/" target="_blank">
+              <img src="img/wordpress.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <a href="#home" class="bottone">Torna sopra</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Mail personale -->
+      <a href="mailto:pasqualegiorgio9868@gmail.com" class="link-footer">pasqualegiorgio9868@gmail.com</a>
+      <!-- Link ai profili social -->
+      <ul class="social">
+        <li class="icona-social">
+          <a class="link-social" href="https://www.linkedin.com/in/pasqualegiorgio/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="icona-social">
+          <a class="link-social" href="https://www.facebook.com/pasquale.giorgio.92" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="icona-social">
+          <a class="link-social" href="https://www.instagram.com/pasquale.giorgio_developer/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="icona-social">
+          <a class="link-social" href="https://github.com/pasqualegiorgio" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
