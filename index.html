@@ -3,8 +3,8 @@
   <head>
     <!-- Set di caratteri -->
     <meta charset="utf-8">
-    <!-- Viweport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Titolo della pagina -->
     <title><Pasquale Giorgio/></title>
     <!-- Icona del sito -->
@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <!-- Link al file CSS di Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
-    <!-- Link al file CSS di Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Link al font di Google Ubuntu Mono -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <!-- Link al file CSS style.css -->
@@ -26,108 +24,121 @@
       <div class="logo">
         <img src="img/icon.svg" alt="Icona programmazione">
       </div>
+
       <!-- Bottone apertura menu' -->
-      <button class="nav-toggle" aria-label="toggle navigation">
+      <button class="nav-toggle" aria-label="toggle navigation" onclick="aperturaNav(nav)">
         <span class="btn-menu"></span>
       </button>
+
       <!-- Menu di navigazione -->
-      <nav class="nav">
-        <ul class="lista-di-navigazione">
-          <li><a href="#cosa-faccio" class="link-di-navigazione">Cosa faccio</a><hr></li>
-          <li><a href="#chi-sono" class="link-di-navigazione">Chi sono</a><hr></li>
-          <li><a href="#i-miei-progetti" class="link-di-navigazione">I miei progetti</a><hr></li>
-          <li><a href="#skills" class="link-di-navigazione">Conoscenze e competenze</a><hr></li>
-        </ul>
+      <nav id="nav">
+        <!-- Simbolo x per chiudere il menu' -->
+        <a href="javascript:void(0)" class="chiusura-btn" onclick="chiusuraNav()">&times</a>
+        <!-- Link della pagina -->
+        <a href="#cosa-faccio">Cosa faccio</a>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#i-miei-progetti">I miei progetti</a>
+        <a href="#skills">Conoscenze e competenze</a>
       </nav>
     </header>
 
     <!-- Contenuto principale del sito -->
-    <main>
+    <main id="main">
+
       <!-- Sezione Intro per la presentazione -->
       <section class="intro" id="home">
         <!-- Nome e cognome -->
         <h1 class="titolo-sezione titolo-sezione--intro">
           Ciao, sono <strong>Pasquale Giorgio</strong>
         </h1>
+
         <!-- Professione -->
         <p class="sottotitolo-sezione sottotitolo-sezione--intro">junior front-end developer</p>
+
         <!-- Immagine di profilo -->
         <img src="img/Pasquale Giorgio.jpg" alt="Un immagine di profilo di Pasquale Giorgio" class="intro__img">
       </section>
 
       <!-- Sezione Cosa faccio -->
       <section id="cosa-faccio">
+        <!-- Titolo -->
         <h2 class="titolo-sezione titolo-sezione--cosafaccio">Cosa faccio</h2>
+        <!-- Contenitore delle card -->
         <div class="servizi">
-          <div class="card-deck">
-            <!-- Card numero 1 -->
-            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
-              <img src="img/start2impact.jpg" class="card-img-top" alt="..." style="border-bottom: 1px solid black; padding-top: 15px; padding-bottom: 15px;">
-              <div class="card-body">
-                <h4 class="card-title"><strong>Studente start2impact</strong></h4>
-                <p class="card-text">
-                  Il mio percorso di formazione principale è con <a href="https://www.start2impact.it/" class="card-link"><strong>start2impact</strong></a>, un'azienda che insegna ai giovani il mondo digitale.<br>
-                  Nello specifico, faccio parte del <strong>Master in Programmazione Web</strong>, che si basa sull'apprendimento di HTML, CSS, JavaScript, PHP, MySQL, Node.js, React e Wordpress e di tutti gli strumenti e i framework correlati.
-                </p>
-              </div>
+          <!-- Card start2impact -->
+          <div class="card">
+            <img src="img/start2impact.jpg" alt="logo di start2impact">
+            <!-- Contenitore del testo -->
+            <div class="testo">
+              <h4><strong>Studente start2impact</strong></h4>
+              <p>
+                Il mio percorso di formazione principale è con <a href="https://www.start2impact.it/" class="card-link"><strong>start2impact</strong></a>, un'azienda che insegna ai giovani il mondo del digitale.<br>
+                Nello specifico, faccio parte del <strong>Master in Programmazione Web</strong>, che si basa sull'apprendimento di HTML, CSS, JavaScript, PHP, MySQL, Node.js, React e Wordpress e di tutti gli strumenti e i framework correlati.
+              </p>
             </div>
-            <!-- Card numero 2 -->
-            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
-              <img src="img/front-end-dev.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h4 class="card-title"><strong>Sviluppo Front End</strong></h4>
-                <p class="card-text">
-                  La mia attività principale di sviluppo riguarda la parte <strong>Front End</strong> dei progetti web, con particolare rilievo alla parte grafica, alle animazioni e alle interazioni con l'utente. Possiedo anche un'infarinatura generale dei linguaggi e delle tecnologie <strong>Back End</strong>, in modo tale da conciliare al meglio le due parti.
-                </p>
-              </div>
+          </div>
+
+          <!-- Card Sviluppo Fron End -->
+          <div class="card">
+            <img src="img/front-end-dev.jpg" alt="front end development">
+            <!-- Contenitore del testo -->
+            <div class="testo">
+              <h4><strong>Sviluppo Front End</strong></h4>
+              <p>
+                La mia attività principale di sviluppo riguarda la parte <strong>Front End</strong> dei progetti web, con particolare rilievo alla parte grafica, alle animazioni e alle interazioni con l'utente. Possiedo anche un'infarinatura generale dei linguaggi e delle tecnologie <strong>Back End</strong>, in modo tale da conciliare al meglio le due parti.
+              </p>
             </div>
-            <!-- Card numero 3 -->
-            <div class="card border-dark mb-3 text-center bg-light border-secondary" style="width: 25rem;">
-              <img src="img/wordpress.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h4 class="card-title"><strong>WordPress</strong></h4>
-                <p class="card-text">
-                  Grazie allo studio e alla pratica, sono in grado di creare un sito web da zero con <a href="https://it.wordpress.com/" class="card-link"><strong>WordPress</strong></a>, sia partendo da un tema già presente e personalizzando i contenuti del sito e sia creando un tema da zero o modificando un tema già presente.
-                </p>
-              </div>
+          </div>
+
+          <!-- Card Wordpress -->
+          <div class="card">
+            <img src="img/wordpress.jpg" alt="wordpress">
+            <!-- Contenitore del testo -->
+            <div class="testo">
+              <h4><strong>WordPress</strong></h4>
+              <p>
+                Grazie allo studio e alla pratica, sono in grado di creare un sito web da zero con <a href="https://it.wordpress.com/" class="card-link"><strong>WordPress</strong></a>, sia partendo da un tema già presente e personalizzando i contenuti del sito e sia creando un tema da zero o modificando un tema già presente.
+              </p>
             </div>
           </div>
         </div>
+
         <!-- Bottone Torna sopra -->
         <a href="#home" class="bottone">Torna sopra</a>
       </section>
 
       <!-- Sezione Chi sono -->
-        <section id="chi-sono">
-          <div class="chi-sono">
-            <h2 class="section__title section__title--chisono">Chi sono</h2>
+      <section id="chi-sono">
+        <!-- Titolo -->
+        <h2 class="section__title section__title--chisono">Chi sono</h2>
 
-            <div>
-              <p>
-                <em>"Così come lo scrittore parte da un foglio bianco, così l'informatico parte da un monitor bianco. Il monitor è la tela, i tasti sono i pennelli, i linguaggi di programmazione sono i colori".</em><br>
-                <strong>Programmare</strong> è un'<em>arte</em> e l'informatico è l'artista moderno.<br>
-                Ogni informatico ha una grande responsabilità: portare l'innovazione tecnologica e digitale nel mondo.<br>
-                Ciao, sono <strong>Pasquale Giorgio</strong>, Junior Front End Web Developer e mi occupo di creare interfacce grafiche per i siti web che siano semplici, pulite, belle ma soprattutto funzionali allo scopo del sito.<br>
-                Ritengo che un buon sito web sia importante, in quanto è come la casa della parte online di ogni business.<br>
-                Infatti, un sito web che funziona è:
-                <ul>
-                  <li>Allineato agli obiettivi di business</li>
-                  <li>Integrato nella strategia di marketing online e complessiva</li>
-                  <li>Integrato nel customer journey: il sito è un punto di contatto fondamentale, in diversi momenti del customer journey.</li>
-                </ul>
-                E' per questo che sono appassionato anche di Digital Marketing e di Imprenditoria: per rendere i siti che creo non solo belli, ma anche efficaci.<br>
-                L'informatica è ciò che mi permette di mettere in atto la mia creatività.<br>
-                Amo imparare, fare nuove esperienze e conoscere nuove persone: sono fattori che mi permettono di aprire la mente e vivere una vita di successo.<br>
-                La crescita e il miglioramento personale sono la mia priorità.
-              </p>
-            </div>
-
-            <img src="img/pasquale-giorgio-img-2.jpg" alt="Pasquale Giorgio" class="chi-sono__img">
+        <!-- Descrizione -->
+        <div class="descrizione">
+          <div>
+            <p><em>"Così come lo scrittore parte da un foglio bianco, così l'informatico parte da un monitor bianco. Il monitor è la tela, i tasti sono i pennelli, i linguaggi di programmazione sono i colori".</em></p>
+            <p><strong>Programmare</strong> è un'<em>arte</em> e l'informatico è l'artista moderno.</p>
+            <p>Ogni informatico ha una grande responsabilità: portare l'innovazione tecnologica e digitale nel mondo.</p>
+            <p>Ciao, sono <strong>Pasquale Giorgio</strong>, Junior Front End Web Developer e mi occupo di creare interfacce grafiche per i siti web che siano semplici, pulite, belle ma soprattutto funzionali allo scopo del sito.</p>
+            <p>Ritengo che un buon sito web sia importante, in quanto è come la casa della parte online di ogni business.</p>
+            Infatti, un sito web che funziona è:
+            <ul>
+              <li>Allineato agli obiettivi di un business</li>
+              <li>Integrato nella strategia di marketing online e in quella complessiva</li>
+              <li>Integrato nel customer journey: il sito è un punto di contatto fondamentale, in diversi momenti del customer journey.</li>
+            </ul>
+            <p>E' per questo che sono anche appassionato anche di Digital Marketing e di Imprenditoria: per rendere i siti che creo non solo belli, ma anche efficaci.</p>
+            <p>L'informatica è ciò che mi permette di mettere in atto la mia creatività.</p>
+            <p>Amo imparare, fare nuove esperienze e conoscere nuove persone: sono fattori che mi permettono di aprire la mente e vivere una vita di successo.</p>
+            <p>La crescita e il miglioramento personale sono la mia priorità.</p>
           </div>
 
-          <!-- Bottone Torna sopra -->
-         <a href="#home" class="bottone">Torna sopra</a>
-        </section>
+          <!-- Immagine -->
+          <img src="img/pasquale-giorgio-img-2.jpg" alt="Pasquale Giorgio" class="chi-sono__img">
+        </div>
+
+        <!-- Bottone Torna sopra -->
+        <a href="#home" class="bottone">Torna sopra</a>
+      </section>
 
       <!-- Sezione I miei progetti -->
       <section id="i-miei-progetti">
@@ -167,7 +178,6 @@
           <a class="precedente" onclick="cambioImmagine(-1)">&#10094;</a>
           <a class="successivo" onclick="cambioImmagine(1)">&#10095;</a>
         </div>
-        <br>
 
         <a href="#home" class="bottone">Torna sopra</a>
       </section>
@@ -176,7 +186,6 @@
       <section id="skills">
         <!-- Titolo -->
         <h2 class="titolo-sezione titolo-sezione--work">Conoscenze e competenze</h2>
-        <br><br>
 
         <h3><strong>Linguaggi</strong></h3>
         <div class="contenitore-grid">
@@ -185,8 +194,6 @@
           <div class="elemento-grid"><img src="img/javascript.svg" alt=""></div>
           <div class="elemento-grid"><img src="img/php.svg" alt=""></div>
         </div>
-
-        <br>
 
         <h3><strong>Framework</strong></h3>
         <div class="contenitore-grid">
@@ -197,8 +204,6 @@
           </div>
         </div>
 
-        <br>
-
         <h3><strong>Librerie</strong></h3>
         <div class="contenitore-grid">
           <div class="elemento-grid">
@@ -207,8 +212,6 @@
             </a>
           </div>
         </div>
-
-        <br>
 
         <h3><strong>Ambienti di sviluppo</strong></h3>
         <div class="contenitore-grid">
@@ -235,6 +238,7 @@
     <footer class="footer">
       <!-- Mail personale -->
       <a href="mailto:pasqualegiorgio9868@gmail.com" class="link-footer">pasqualegiorgio9868@gmail.com</a>
+
       <!-- Link ai profili social -->
       <ul class="social">
         <li class="icona-social">
@@ -260,7 +264,7 @@
       </ul>
     </footer>
 
-    <script src="js/index.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/progetti.js"></script>
   </body>
 </html>
