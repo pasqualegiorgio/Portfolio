@@ -97,7 +97,7 @@ header {
 .btn-menu,
 .btn-menu::before,
 .btn-menu::after {
-  background: #00E600;
+  background: #32CD32;
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -127,7 +127,7 @@ nav {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #00E600;
+  background-color: #32CD32;
   overflow: hidden;
   padding-top: 60px;
   transition:0.5s;
@@ -242,7 +242,7 @@ nav .chiusura-btn {
 }
 
 .sottotitolo-sezione--intro {
-    background: #00E600;
+    background: #32CD32;
     padding: 5px 20px;
     font-family: var(--ff-secondary);
     margin-bottom: 5px;
@@ -319,7 +319,7 @@ nav .chiusura-btn {
 /*  Sezione Cosa faccio  */
 
 #cosa-faccio {
-  background-color: #00E600;
+  background-color: #32CD32;
   background-size: cover;
   color: black;
   text-align: center;
@@ -476,7 +476,7 @@ img {
 /* Sezione I miei progetti */
 
 #i-miei-progetti {
-  background-color: #00E600;
+  background-color: #32CD32;
   color: black;
   text-align: center;
   padding-top: 25px;
