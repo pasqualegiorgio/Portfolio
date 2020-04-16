@@ -26,6 +26,10 @@
 
 /* Stili elementi generici */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
   color: black;
@@ -394,7 +398,6 @@ img {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: transform 200ms ease-in-out;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
